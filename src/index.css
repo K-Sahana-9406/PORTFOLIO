@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+ 
+  --color-bg-main: #141414;        
+  --color-bg-card: #2e2e2e;      
+
+
+  --color-blue-dark: #16537e;     
+  --color-blue-main: #3d85c6;     
+  --color-blue-light: #459de0;   
+
+
+  --color-text-main: #e5e7eb;      
+  --color-text-muted: #9ca3af;     
+}
+.btn-outline {
+  @apply bg-bg-card border border-blue-main/40 text-blue-main 
+         px-6 py-2.5 rounded-lg 
+         hover:bg-blue-main hover:text-white 
+         transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-dark to-blue-main 
+         text-white px-7 py-2.5 rounded-lg 
+         shadow-md hover:shadow-[0_0_30px_rgba(59,130,246,0.6)]
+         transition-all duration-300;
+}
