@@ -1,0 +1,93 @@
+{
+ 
+  "skills": [
+     {
+    "id": 1,
+    "name": "Java",
+    "appliedIn": "DSA Practice, Academic Projects",
+    "focus": "Object-oriented programming, problem solving",
+    "category": "language",
+    "icon": "java"
+  },
+  {
+    "id": 2,
+    "name": "HTML",
+    "appliedIn": "Portfolio, web applications",
+    "focus": "Semantic structure, accessibility, SEO-friendly layouts",
+    "category": "frontend",
+    "icon": "html"
+  },
+  {
+    "id": 3,
+    "name": "CSS",
+    "appliedIn": "Portfolio, Web Applications",
+    "focus": "Responsive design, layouts, animations, modern UI styling",
+    "category": "frontend",
+    "icon": "css"
+  },
+  {
+    "id": 4,
+    "name": "JavaScript",
+    "appliedIn": "Bonafide Generator , college management system",
+    "focus": "DOM manipulation, event handling, logic building",
+     "category": "frontend",
+    "icon": "js"
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "appliedIn": "Bonafide Generator , college management system",
+    "focus": "Server-side logic, APIs, database connectivity",
+"category": "backend",
+    "icon": "node"
+  },
+  {
+    "id": 6,
+    "name": "Express.js",
+    "appliedIn": "Bonafide Generator , college management system",
+    "focus": "Routing, middleware, structured backend development",
+ "category": "backend",
+    "icon": "express"
+  },
+  {
+    "id": 7,
+    "name": "React",
+    "appliedIn": "Portfolio, Instagram Clone",
+    "focus": "Component-based UI, hooks, state management",
+    "category": "frontend",
+    "icon": "react"
+  },
+  {
+    "id": 8,
+    "name": "Tailwind CSS",
+    "appliedIn": "Portfolio, Instagram Clone",
+    "focus": "Utility-first styling, responsive and clean design",
+   "category": "frontend",
+    "icon": "tailwind"
+  },
+  {
+    "id": 9,
+    "name": "MySQL",
+    "appliedIn": "College Management System",
+    "focus": "Relational database design, queries, data integrity",
+       "category": "backend",
+    "icon": "mysql"
+  },
+  {
+    "id": 10,
+    "name": "MongoDB",
+    "appliedIn": "Bonafide Generator",
+    "focus": "NoSQL database, collections, CRUD operations",
+    "category": "backend",
+    "icon": "mongo"
+  }
+ 
+
+
+
+]
+
+  
+}
+
+

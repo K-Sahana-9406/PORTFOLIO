@@ -58,7 +58,7 @@ export default function Home() {
                 <p className="text-xs text-text-muted">Projects Built</p>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-blue-main">2025</h3>
+                <h3 className="text-2xl font-bold text-blue-main">2026</h3>
                 <p className="text-xs text-text-muted">Placement Focus</p>
               </div>
             </div>
