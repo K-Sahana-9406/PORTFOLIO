@@ -95,7 +95,7 @@
     "title": "Personal Portfolio Website",
     "description": "Responsive personal portfolio showcasing projects, skills, and GitHub work with a clean UI.",
     "github": "https://github.com/K-Sahana-9406/PORTFOLIO",
-    "live": "https://sahana-portfolio.netlify.app",
+    "live": "",
     "images":"",
     "stack": ["React", "Tailwind CSS"]
  
