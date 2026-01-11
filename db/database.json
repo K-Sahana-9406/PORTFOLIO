@@ -87,7 +87,74 @@
 
 ]
 
+  ,
   
+"projects": [
+  {
+    "id": 1,
+    "title": "Personal Portfolio Website",
+    "description": "Responsive personal portfolio showcasing projects, skills, and GitHub work with a clean UI.",
+    "github": "https://github.com/K-Sahana-9406/PORTFOLIO",
+    "live": "https://sahana-portfolio.netlify.app",
+    "images":"",
+    "stack": ["React", "Tailwind CSS"]
+ 
+  },  {
+    "id": 2,
+    "title": "Instagram Clone",
+    "description": "Frontend clone of Instagram featuring login UI, posts layout, and responsive design.",
+    "github": "https://github.com/K-Sahana-9406/Instagram_clone",
+    "live": "",
+     "images":"",
+    "stack": ["React", "Tailwind CSS"]
+ 
+  },
+  {
+    "id": 3,
+    "title": "Bonafide Certificate Generator",
+    "description": "Web-based system to generate bonafide certificates digitally by entering student details.",
+    "github": "https://github.com/K-Sahana-9406/bonafide_certificate_generator",
+    "live": "",
+     "images":"",
+    "stack": ["HTML", "CSS", "JavaScript","Node.js","express.js","MySQL"]
+
+  },
+
+  {
+    "id": 4,
+    "title": "College Management System",
+    "description": "Role-based college management system with Admin and User modules supporting CRUD operations.",
+    "github": "https://github.com/K-Sahana-9406/College_Management_System ",
+    "live": "",
+     "images":"",
+     "stack": ["HTML", "CSS", "JavaScript","Node.js","MySQL"]
+ 
+  }
+  ,
+{
+  "id": 5,
+  "title": "Art Landing Page",
+  "description": "Visually appealing art-themed landing page designed with a focus on layout, typography, and responsive UI using pure HTML and CSS.",
+  "github": "https://github.com/K-Sahana-9406/HTML_CSS/tree/main/ART",
+  "live": "https://art-landingpage.netlify.app/",
+   "images":"",
+  "stack": ["HTML", "CSS"]
+}
+,
+{
+  "id": 6,
+  "title": "Ticket Booking System",
+  "description": "Console-based ticket booking system built using JavaScript, implementing seat generation, booking, cancellation, search, and revenue calculation with asynchronous operations.",
+  "github": "https://github.com/K-Sahana-9406/BYTE_STACK_INTERNSHIP/blob/main/TASK1/ticket.js",
+  "live": "",
+   "images":"",
+  "stack": ["JavaScript", "Node.js"]
+}
+
+
+
+]
+
 }
 
 
