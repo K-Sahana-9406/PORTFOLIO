@@ -34,13 +34,22 @@ const iconMap = {
 
 export default function Skills() {
   const [skills, setSkills] = useState([]);
+const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/skills")
-      .then((res) => res.json())
-      .then((data) => setSkills(data))
-      .catch((err) => console.error("Failed to load skills", err));
-  }, []);
+
+useEffect(() => {
+  fetch("https://6963de5b2d146d9f58d49633.mockapi.io/portfolio/skills")
+    .then((res) => res.json())
+    .then((data) => {
+      setSkills(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error("Failed to load skills", err);
+      setLoading(false);
+    });
+}, []);
+
 
   const languages = skills.filter((s) => s.category === "language");
   const frontend = skills.filter((s) => s.category === "frontend");
@@ -61,11 +70,22 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="mt-16 space-y-20">
-          <SkillSection title="Programming Languages" data={languages} />
-          <SkillSection title="Frontend Development" data={frontend} />
-          <SkillSection title="Backend Development" data={backend} />
-        </div>
+      <div className="mt-16 space-y-20">
+  {loading ? (
+    <>
+      <SkillSkeleton />
+      <SkillSkeleton />
+      <SkillSkeleton />
+    </>
+  ) : (
+    <>
+      <SkillSection title="Programming Languages" data={languages} />
+      <SkillSection title="Frontend Development" data={frontend} />
+      <SkillSection title="Backend Development" data={backend} />
+    </>
+  )}
+</div>
+
       </main>
 
       <Footer />
@@ -135,5 +155,32 @@ function SkillSection({ title, data }) {
         ))}
       </div>
     </section>
+  );
+}
+function SkillSkeleton({ count = 3 }) {
+  return (
+    <div className="space-y-6">
+      {Array.from({ length: count }).map((_, i) => (
+        <div
+          key={i}
+          className="
+            animate-pulse
+            flex items-center gap-6
+            rounded-2xl
+            bg-blue-main/10
+            border border-blue-main/30
+            px-6 py-5
+          "
+        >
+          <div className="w-14 h-14 rounded-xl bg-blue-main/30" />
+
+          <div className="flex-1 space-y-3">
+            <div className="h-4 w-1/3 bg-blue-main/30 rounded" />
+            <div className="h-3 w-2/3 bg-blue-main/20 rounded" />
+            <div className="h-3 w-1/2 bg-blue-main/20 rounded" />
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

@@ -3,14 +3,23 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
+ const [projects, setProjects] = useState([]);
+const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/projects")
-      .then((res) => res.json())
-      .then((data) => setProjects(data))
-      .catch((err) => console.error("Failed to load projects", err));
-  }, []);
+
+useEffect(() => {
+  fetch("https://6963de5b2d146d9f58d49633.mockapi.io/portfolio/projects")
+    .then((res) => res.json())
+    .then((data) => {
+      setProjects(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error("Failed to load projects", err);
+      setLoading(false);
+    });
+}, []);
+
 
   return (
     <div className="bg-bg-main min-h-screen text-text-main flex flex-col">
@@ -21,7 +30,11 @@ export default function Projects() {
       <div className="max-w-3xl"> <h1 className="text-4xl sm:text-5xl font-bold leading-tight"> Selected <span className="text-blue-main">Projects</span> </h1> <p className="text-text-muted mt-5 text-lg"> Real-world projects that demonstrate my problem-solving, development approach, and technical depth. </p> </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        {loading ? (
+  <ProjectSkeleton />
+) : (
+  projects.map((project) => (
+
             <div
               key={project.id}
    
@@ -80,12 +93,50 @@ export default function Projects() {
 </div>
 
             </div>
-          ))}
+          )))}
         </div>
 
       </main>
 
       <Footer />
     </div>
+  );
+}
+function ProjectSkeleton({ count = 6 }) {
+  return (
+    <>
+      {Array.from({ length: count }).map((_, i) => (
+        <div
+          key={i}
+          className="
+            animate-pulse
+            relative bg-blue-main/10 border border-blue-main/30
+            rounded-2xl p-4 md:p-5 backdrop-blur-md shadow-xl
+          "
+        >
+          <div className="h-6 w-2/3 bg-blue-main/30 rounded" />
+
+          <div className="mt-4 space-y-2">
+            <div className="h-3 w-full bg-blue-main/20 rounded" />
+            <div className="h-3 w-5/6 bg-blue-main/20 rounded" />
+            <div className="h-3 w-4/6 bg-blue-main/20 rounded" />
+          </div>
+
+          <div className="mt-4 flex gap-2 flex-wrap">
+            {Array.from({ length: 3 }).map((_, j) => (
+              <div
+                key={j}
+                className="h-6 w-16 rounded-full bg-blue-main/20"
+              />
+            ))}
+          </div>
+
+          <div className="mt-5 flex gap-3">
+            <div className="h-9 w-24 rounded-lg bg-blue-main/30" />
+            <div className="h-9 w-24 rounded-lg bg-blue-main/20" />
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
